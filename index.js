@@ -62,7 +62,7 @@ Axletree.prototype.bootstrap = function(options, cb) {
     //设置路由
     this.app.use(appRouter(this.DEBUG, this.ROOT_PATH));
     //设置全局功能函数
-    this.app.locals.Util = Util;
+    this.app.locals.Util = Util(this.DEBUG, this.ROOT_PATH);
     //错误处理
     this.errorHandler(this.app);
     
